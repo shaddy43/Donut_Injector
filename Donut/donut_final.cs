@@ -3,6 +3,7 @@
 //This encryption/decryption process is used  to bypass static analysis and to some extent dynamic analysis
 //The injection template has been found and modified from ExcelNtDonut, hence the modified malware name is Donut.
 //The AES_shellcode_encryptor had been provide in the repository: https://github.com/shaddy43/AES_Shellcode_Encryptor
+//This injector creates an injected process itself therefore bypassing many AVs that detects injection in already running processes like Kaspersky and Defender
 //Author: Shaddy43
 //Designation: Cybersecurity Engineer, Reverse engineer & malware developer
 
